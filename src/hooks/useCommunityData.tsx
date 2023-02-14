@@ -32,7 +32,7 @@ const useCommunityData = () => {
     isJoined: boolean
   ) => {
     //check if user is signed in
-    if (!user) {
+    if (!user?.uid) {
       setAuthModalState({ open: true, view: "login" });
     }
 
@@ -155,7 +155,7 @@ const useCommunityData = () => {
   };
 
   useEffect(() => {
-    if (!user) {
+    if (!user?.uid) {
       setCommunityStateValue((prev) => ({
         ...prev,
         mySnippets: [],

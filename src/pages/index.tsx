@@ -126,7 +126,7 @@ const Home: NextPage = () => {
   }, [user, communityStateValue.snippetsFetched]);
 
   useEffect(() => {
-    if (!user && !loadingUser) buildNoUserHomeFeed();
+    if (!user?.uid && !loadingUser) buildNoUserHomeFeed();
   }, [user, loadingUser]);
 
   useEffect(() => {

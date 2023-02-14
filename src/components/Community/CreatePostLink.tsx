@@ -11,12 +11,12 @@ import { IoImageOutline } from "react-icons/io5";
 import { useSetRecoilState } from "recoil";
 
 const CreatePostLink: React.FC = () => {
-  const user = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const setAuthModalState = useSetRecoilState(authModalState);
   const { toggleMenuOpen } = useDirectory();
 
   const onClick = () => {
-    if (!user) {
+    if (!user?.uid) {
       setAuthModalState({ open: true, view: "login" });
       return;
     }

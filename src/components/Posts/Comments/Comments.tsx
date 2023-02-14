@@ -47,7 +47,7 @@ const Comments: React.FC<CommentsProps> = ({
   const setPostState = useSetRecoilState(postState);
 
   const onCreateComment = async () => {
-    if (!user) {
+    if (!user?.uid) {
       setAuthModalState({ open: true, view: "login" });
       return;
     }
