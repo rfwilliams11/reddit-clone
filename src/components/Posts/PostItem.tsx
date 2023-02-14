@@ -13,7 +13,7 @@ import {
 import moment from "moment";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { MouseEvent, useState } from "react";
+import React, { useState } from "react";
 import { AiOutlineDelete } from "react-icons/ai";
 import { BsChat, BsDot } from "react-icons/bs";
 import { FaReddit } from "react-icons/fa";
@@ -21,7 +21,6 @@ import {
   IoArrowDownCircleOutline,
   IoArrowDownCircleSharp,
   IoArrowRedoOutline,
-  IoArrowUpCircle,
   IoArrowUpCircleOutline,
   IoArrowUpCircleSharp,
   IoBookmarkOutline,
